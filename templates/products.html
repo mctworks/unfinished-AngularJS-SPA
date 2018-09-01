@@ -1,0 +1,49 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="jumbotron text-center">
+			<h2>Step 1: Choose Your Template</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-3 col-md-3 col-lg-3">
+			<p><strong>Categories:</strong></br>
+			________________</br>
+	<ul>
+    <li><a href="#!products/yardsigns" ui-sref=".yardsigns">Yard Signs</a>
+    <ul>
+        <li>Hole Sponsor</li>
+        <li>Longest Drive</li>
+        <li>Closest to Pin</li>
+		<li>Accurate Drive</li>
+		<li>Registration</li>
+		<li>Cart Sponsor</li>
+		<li>Drink Sponsor</li>
+    </ul></li>
+    <li><a href="#!products/banners" ui-sref=".banners">Banners/Boards</a>
+    <ul>
+        <li>Vinyl</li>
+        <li>Cart Banners</li>
+        <li>Static Clings</li>
+		<li>Sponsor Boards</li>
+    </ul></li>
+	<li><a href="#!products/checks" ui-sref=".checks">Oversized Checks</a></li>
+	<li><a href="#!products/prize" ui-sref=".prize">Prize Packages</a></li>
+	</ul>
+
+		</div>
+		<!--display product content-->
+		<div class="col-sm-6 col-md-6 col-lg-6">
+		<div ui-view="productsView"></div>
+		</div>
+		
+		<div class="col-sm-3 col-md-3 col-lg-3">
+			<strong>Shopping Cart:</strong>
+			<div class="row" ng-repeat="x in cart">
+				{{x.qty}} {{x.desc}} ${{x.price}}
+			</div>
+			<div class="row">
+				<strong>Subtotal:</strong> ${{subtotal}}
+			</div>
+		</div>
+	</div>	
+</div>
